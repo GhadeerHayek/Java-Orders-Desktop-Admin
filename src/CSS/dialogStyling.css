@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 3, 2021, 9:59:02 PM
+    Author     : ghadi
+*/
+/*
+reference : https://stackoverflow.com/questions/28417140/styling-default-javafx-dialogs
+biggest reference ever : http://hg.openjdk.java.net/openjfx/8u40/rt/file/6cc08ec1ea82/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css
+*/
+
+.successDialog{
+    /* this is to style the dialog itself */  
+    -fx-font-family: sans-serif;
+}
+/*
+to style the header panel itself : 
+
+
+.myDialog:header *.header-panel{
+    -fx-background-color: #a59c31;
+}
+
+*/
+.successDialog:header *.header-panel *.label{
+    /*this is to style the label of the header in a dialog*/
+    -fx-text-fill:green;
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+}
+
+/*this is to style the content of the dialog */
+.successDialog > *.label.content{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* this is to style the button's bar 
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: #a9e200;
+}
+
+
+'*/
+
+.errorDialog{
+    /* this is to style the dialog itself */  
+    -fx-font-family: sans-serif;
+}
+/*
+to style the header panel itself : 
+
+
+.myDialog:header *.header-panel{
+    -fx-background-color: #a59c31;
+}
+
+*/
+.errorDialog:header *.header-panel *.label{
+    /*this is to style the label of the header in a dialog*/
+    -fx-text-fill:red;
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+}
+/*this is to style the content of the dialog */
+.errorDialog > *.label.content{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="804.0" styleClass="pane" stylesheets="@../CSS/ManageScreensStyling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="776.0" styleClass="vbox">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="338.0" spacing="10.0">
+               <children>
+                  <Label alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="289.0" text="Manage Clients" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="45.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="65.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="clientIDInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" promptText="Client ID ..">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="36.0" prefWidth="135.0" text="OR Search by Name" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="clientNameInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" promptText="Client Name .." />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="tableViewClients" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="414.0" style="fx-blend-mode: multiply;" GridPane.columnIndex="1">
+               <columns>
+                  <TableColumn fx:id="tableColumnID" prefWidth="40.0" text="ID" />
+                  <TableColumn fx:id="tableColumnName" prefWidth="104.0" text="Name" />
+                  <TableColumn fx:id="tableColumnEmail" prefWidth="163.0" text="Email" />
+                  <TableColumn fx:id="tableColumnMobile" minWidth="0.0" prefWidth="106.0" text="Mobile" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="776.0" spacing="10.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="searchClientBtn" mnemonicParsing="false" onAction="#searchClientBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Search ">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="deleteClientBtn" mnemonicParsing="false" onAction="#deleteClientBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Delete ">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="viewClientBtn" mnemonicParsing="false" onAction="#viewClientBtnHandle" prefHeight="40.0" prefWidth="150.0" text="View ">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/view.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Back">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/back2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="350.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="425.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</VBox>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="804.0" styleClass="pane" stylesheets="@../CSS/ManageScreensStyling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="776.0" styleClass="vbox">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="338.0" spacing="10.0">
+               <children>
+                  <Label alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="289.0" text="Manage Invoices" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="45.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="65.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="invoiceID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" promptText="Invoice ID ..">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="tableViewInvoice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="414.0" style="fx-blend-mode: multiply;" GridPane.columnIndex="1">
+               <columns>
+                  <TableColumn fx:id="tableColumnID" prefWidth="77.0" text="ID" />
+                  <TableColumn fx:id="tableColumnOrderID" prefWidth="95.0" text="OrderID" />
+                  <TableColumn fx:id="tableColumnTotalPrice" prefWidth="112.0" text="TotalPrice" />
+                  <TableColumn fx:id="tableColumnDate" minWidth="0.0" prefWidth="129.0" text="Date" />
+               </columns>
+            </TableView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="776.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="generateBtn" layoutX="83.0" layoutY="41.0" mnemonicParsing="false" onAction="#generateBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Generate">
+                           <font>
+                              <Font name="Monospaced Bold Italic" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/generate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="viewOrderBtn" mnemonicParsing="false" onAction="#viewOrderBtnHandle" prefHeight="40.0" prefWidth="150.0" text="View ">
+                           <font>
+                              <Font name="Monospaced Bold Italic" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/view.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="searchOrderBtn" mnemonicParsing="false" onAction="#searchOrderBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Search ">
+                           <font>
+                              <Font name="Monospaced Bold Italic" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="deleteOrderBtn" mnemonicParsing="false" onAction="#deleteOrderBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Delete ">
+                           <font>
+                              <Font name="Monospaced Bold Italic" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backBtnHandle" prefHeight="40.0" prefWidth="150.0" text="Back">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/back2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="350.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="425.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</VBox>

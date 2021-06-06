@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="679.0" styleClass="pane" stylesheets="@../CSS/Screen1Styling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainGUIs.LoginScreenController">
+   <center>
+      <VBox alignment="CENTER_LEFT" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="482.0" spacing="8.0" styleClass="vbox" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="326.0" text="Project Log-In" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Monotype Corsiva" size="45.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="usernameInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="346.0" promptText="Enter username .. ">
+               <font>
+                  <Font name="Calibri Light" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></TextField>
+            <PasswordField fx:id="passwordInput" prefHeight="45.0" prefWidth="346.0" promptText="Enter password .. " />
+            <HBox prefHeight="55.0" prefWidth="350.0" spacing="15.0">
+               <children>
+                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginBtnHandle" text="Log in ">
+                     <font>
+                        <Font name="Calibri Light Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resetBtn" mnemonicParsing="false" onAction="#resetBtnHandle" text="Reset">
+                     <font>
+                        <Font name="Calibri Light Italic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="365.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="149.0" style="-fx-font-family: Trebuchet MS; -fx-font-size: 14pt; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: white;" text="Not a member?" />
+                  <Button fx:id="joinBtn" alignment="CENTER" mnemonicParsing="false" onAction="#joinBtnHandle" text="Join us!" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri Light Italic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
